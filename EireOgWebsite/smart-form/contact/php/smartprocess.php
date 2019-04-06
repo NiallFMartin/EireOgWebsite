@@ -18,7 +18,6 @@
 	$emailaddress = strip_tags(trim($_POST["emailaddress"]));
 	$sendersubject = strip_tags(trim($_POST["sendersubject"]));
 	$sendermessage = strip_tags(trim($_POST["sendermessage"]));
-    $captcha = strtoupper(strip_tags(trim($_POST["captcha"])));
 	
 /*	----------------------------------------------------------------------
 	: Prepare form field variables for CSV export
@@ -59,28 +58,19 @@
 	if(isset($_POST["sendersubject"])){
 			if (!$sendersubject) {
 				$errors[] = "You must enter a subject.";
-			} elseif(strlen($sendersubject) < 4)  {
-				$errors[] = "Subject must be at least 4 characters.";
+			} elseif(strlen($sendersubject) < 1)  {
+				$errors[] = "Subject must not be empty.";
 			}
 	}
 	
 	//validate message / comment
 	if(isset($_POST["sendermessage"])){
-		if (strlen($sendermessage) < 10) {
+		if (strlen($sendermessage) < 1) {
 			if (!$sendermessage) {
 				$errors[] = "You must enter a message.";
 			} else {
-				$errors[] = "Message must be at least 10 characters.";
+				$errors[] = "You must enter a message.";
 			}
-		}
-	}
-	
-	// validate security captcha 
-	if(isset($_POST["captcha"])){
-		if (!$captcha) {
-			$errors[] = "You must enter the captcha code";
-		} else if (($captcha) != $_SESSION['gfm_captcha']) {
-			$errors[] = "Captcha code is incorrect";
 		}
 	}
 	
@@ -117,8 +107,7 @@
 		$recipients = false;
 		if($recipients == true){
 			$recipients = array(
-				"address@example.com" => "Recipient Name",
-				"address@example.com" => "Recipient Name"
+				"niall042@gmail.com" => "Eire og"
 			);
 			
 			foreach($recipients as $email => $name){

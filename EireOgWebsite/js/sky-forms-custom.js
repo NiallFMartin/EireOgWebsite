@@ -23,13 +23,8 @@ $(function()
 						message:
 						{
 							required: true,
-							minlength: 10
+							minlength: 1
 						},
-						captcha:
-						{
-							required: true,
-							remote: './sky-form/captcha/process.php'
-						}
 					},
 										
 					// Messages for form validation
@@ -48,11 +43,6 @@ $(function()
 						{
 							required: 'Please enter your message'
 						},
-						captcha:
-						{
-							required: 'Please enter characters',
-							remote: 'Correct captcha is required'
-						}
 					},
 										
 					// Ajax form submition					

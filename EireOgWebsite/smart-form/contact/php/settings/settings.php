@@ -3,7 +3,7 @@
 	/* Enter your name or company name below
 	 * You can also use your website URL
 	--------------------------------------------- */
-	$receiver_name = "My Company";
+	$receiver_name = " Vancouver Eire Og";
 	
 	/* Enter your message subject below
 	 * This subject is the one you will see in your email
@@ -14,7 +14,7 @@
 	 * For more than one email go to smartprocess.php then
 	 * Add addresses to the recipients section
 	------------------------------------------------------ */
-	$receiver_email = "example@domain.com";
+	$receiver_email = "niall042@gmail.com";
 	
 	/* If you want to redirect to another page after sending the form
 	 * Change the $redirectForm option below from (false) to (true)

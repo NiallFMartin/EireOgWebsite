@@ -12,11 +12,11 @@
 				}
 				
 
-				function recaptchaResetCallback () {
-					if($('#g-recaptcha').length) { 
-						grecaptcha.reset(); 
-					}
-				}
+				//function recaptchaResetCallback () {
+				//	if($('#g-recaptcha').length) { 
+				//		grecaptcha.reset(); 
+				//	}
+				//}
 			   
 				$( "#smart-form" ).validate({
 						errorClass: "state-error",
@@ -33,16 +33,16 @@
 								},
 								sendersubject: {
 										required: true,
-										minlength: 4
+										minlength: 1
 								},								
 								sendermessage: {
 										required: true,
-										minlength: 10
+										minlength: 1
 								},
-								"g-recaptcha-response":{
-									required:true,
-									remote:'./smart-form/contact-recaptcha/php/process_reCaptcha.php'
-								}
+								//"g-recaptcha-response":{
+								//	required:true,
+								//	remote:'./smart-form/contact-recaptcha/php/process_reCaptcha.php'
+								//}
 						},
 						messages:{
 								sendername: {
@@ -55,16 +55,16 @@
 								},
 								sendersubject: {
 										required: 'Subject is important',
-										minlength: 'Subject must be at least 4 characters'
+										minlength: 'Subject must not be empty'
 								},														
 								sendermessage: {
 										required: 'Oops you forgot your message',
-										minlength: 'Message must be at least 10 characters'
+										minlength: 'Message must not be empty'
 								},															
-								"g-recaptcha-response":{
-										required: 'Check reCaptcha for verification',
-										remote:'Invalid reCaptcha verification'
-								}
+								//"g-recaptcha-response":{
+								//		required: 'Check reCaptcha for verification',
+								//		remote:'Invalid reCaptcha verification'
+								//}
 						},
 						highlight: function(element, errorClass, validClass) {
 								$(element).closest('.field').addClass(errorClass).removeClass(validClass);
@@ -97,7 +97,7 @@
 											$('.field').removeClass("state-error, state-success");
 											if( $('.alert-error').length == 0){
 												$('#smart-form').resetForm();
-												recaptchaResetCallback();
+												//recaptchaResetCallback();
 											}
 									 }
 							  });

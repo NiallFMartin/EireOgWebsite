@@ -64,7 +64,7 @@
                             </label>
                         </div><!-- end section -->
                         
-                        <div class="section">
+                        <!--<div class="section">
                             <div class="smart-widget sm-left sml-120">
                                 <label class="field">
                                     <input type="text" name="captcha" id="captcha" class="gui-input sfcode" maxlength="6" placeholder="Enter CAPTCHA">
@@ -74,7 +74,9 @@
                                     <span class="refresh-captcha"><i class="fa fa-refresh"></i></span>
                                 </label>
                             </div><!-- end .smart-widget section --> 
-                        </div><!-- end section -->
+                        <!--</div>-->
+					<!-- end section -->
+					
                         
                        <div class="result"></div><!-- end .result  section --> 
                                                                                                                     

@@ -40,8 +40,8 @@
 	 
 			if (!$sendername) {
 				$errors[] = "You must enter a name.";
-			} elseif(strlen($sendername) < 2)  {
-				$errors[] = "Name must be at least 2 characters.";
+			} elseif(strlen($sendername) < 1)  {
+				$errors[] = "Name must not be empty.";
 			}
 	 
 	}
@@ -58,18 +58,18 @@
 	if(isset($_POST["sendersubject"])){
 			if (!$sendersubject) {
 				$errors[] = "You must enter a subject.";
-			} elseif(strlen($sendersubject) < 4)  {
-				$errors[] = "Subject must be at least 4 characters.";
+			} elseif(strlen($sendersubject) < 1)  {
+				$errors[] = "Subject must not be empty.";
 			}
 	}
 	
 	//validate message / comment
 	if(isset($_POST["sendermessage"])){
-		if (strlen($sendermessage) < 10) {
+		if (strlen($sendermessage) < 1) {
 			if (!$sendermessage) {
 				$errors[] = "You must enter a message.";
 			} else {
-				$errors[] = "Message must be at least 10 characters.";
+				$errors[] = "Message must not be empty.";
 			}
 		}
 	}

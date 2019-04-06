@@ -13,7 +13,7 @@
         <script type="text/javascript" src="js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/additional-methods.min.js"></script>
         <script type="text/javascript" src="js/smart-form.js"></script> 
-        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
         
         <!--[if lte IE 9]>
         	<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
@@ -65,7 +65,7 @@
                             </label>
                         </div><!-- end section -->
                         
-                        <div class="section">  
+                        <!--<div class="section">  
                         	<label class="field">
                             	<input type="text" id="g-recaptcha-response" name="g-recaptcha-response" class="smart-hidden-elem">
                                 <div id="g-recaptcha" class="g-recaptcha" 
@@ -73,7 +73,7 @@
                                 data-expired-callback="recaptchaResetCallback"  
                                 data-theme="light"></div>
                             </label>
-                        </div><!-- end section -->
+                        </div>--><!-- end section -->
                         
                        <div class="result"></div><!-- end .result  section --> 
                                                                                                                     

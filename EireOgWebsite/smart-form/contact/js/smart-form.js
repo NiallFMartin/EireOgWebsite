@@ -1,10 +1,10 @@
 	jQuery(document).ready(function($){
 
-				function reloadCaptcha(){ $("#captchax").attr("src","./smart-form/contact/php/captcha/captcha.php?r=" + Math.random()); }
-				$('.captcode').click(function(e){
-					e.preventDefault();
-					reloadCaptcha();
-				});
+				//function reloadCaptcha(){ $("#captchax").attr("src","./smart-form/contact/php/captcha/captcha.php?r=" + Math.random()); }
+				//$('.captcode').click(function(e){
+				//	e.preventDefault();
+				//	reloadCaptcha();
+				//});
 				
 				function swapButton(){
 					var txtswap = $(".form-footer button[type='submit']");
@@ -31,7 +31,7 @@
 						rules: {
 								sendername: {
 										required: true,
-										minlength: 2
+										minlength: 1
 								},		
 								emailaddress: {
 										required: true,
@@ -39,21 +39,21 @@
 								},
 								sendersubject: {
 										required: true,
-										minlength: 4
+										minlength: 1
 								},								
 								sendermessage: {
 										required: true,
-										minlength: 10
+										minlength: 1
 								},
-								captcha:{
-									required:true,
-									remote:'./smart-form/contact/php/captcha/process.php'
-								}
+								//captcha:{
+								//	required:true,
+								//	remote:'./smart-form/contact/php/captcha/process.php'
+								//}
 						},
 						messages:{
 								sendername: {
 										required: 'Enter your name',
-										minlength: 'Name must be at least 2 characters'
+										minlength: 'Name must not be empty'
 								},				
 								emailaddress: {
 										required: 'Enter your email address',
@@ -61,16 +61,16 @@
 								},
 								sendersubject: {
 										required: 'Subject is important',
-										minlength: 'Subject must be at least 4 characters'
+										minlength: 'Subject must not be empty'
 								},														
 								sendermessage: {
 										required: 'Oops you forgot your message',
-										minlength: 'Message must be at least 10 characters'
+										minlength: 'Message must not be empty'
 								},															
-								captcha:{
-										required: 'You must enter the captcha code',
-										remote:'Captcha code is incorrect'
-								}
+								//captcha:{
+								//		required: 'You must enter the captcha code',
+								//		remote:'Captcha code is incorrect'
+								//}
 						},
 
 						/* @validation highlighting + error placement  
@@ -109,7 +109,7 @@
 											$('.field').removeClass("state-error, state-success");
 											if( $('.alert-error').length == 0){
 												$('#smart-form').resetForm();
-												reloadCaptcha();
+												//reloadCaptcha();
 											}
 									 }
 							  });
